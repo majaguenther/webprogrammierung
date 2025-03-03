@@ -1,0 +1,17 @@
+.answer-button {
+    background-color: #282c34;
+    color: white;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.answer-button:hover {
+    background-color: #61dafb;
+    transform: scale(1.05);
+}

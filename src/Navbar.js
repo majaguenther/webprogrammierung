@@ -21,11 +21,7 @@ function Navbar() {
                             About
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to="/search" className="nav-links">
-                            Search
-                        </Link>
-                    </li>
+
                 </ul>
             </div>
         </nav>

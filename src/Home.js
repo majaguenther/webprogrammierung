@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const tiles = [
-    { title: "Page 1", path: "/page1" },
+    { title: "quiz", path: "/quiz1" },
     { title: "Page 2", path: "/page2" },
     { title: "Page 3", path: "/page3" },
     { title: "Page 4", path: "/page4" },
