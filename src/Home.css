@@ -7,7 +7,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3x4 Grid */
     gap: 15px;
-    max-width: 800px;
     margin: 20px auto;
 }
 
