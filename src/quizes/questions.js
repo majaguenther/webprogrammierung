@@ -1,5 +1,5 @@
 export const questions1 = [
-  { title: "Hauptsätdte raten!" },
+  { title: "Hauptstädte raten!" },
   { question: "Welche ist die Hauptstadt von Deutschland?", options: ["Berlin", "München", "Hamburg", "Köln"], answer: "Berlin" },
   { question: "Welche ist die Hauptstadt von Lettland?", options: ["Liepaja", "Jelgava", "Riga", "Windau"], answer: "Riga" },
   { question: "Welche ist die Hauptstadt der Türkei?", options: ["Antalya", "Izmir", "Ankara", "Istanbul"], answer: "Ankara" },
