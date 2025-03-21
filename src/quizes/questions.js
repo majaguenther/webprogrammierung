@@ -27,5 +27,5 @@ export const questions1 = [
   ];
   
   // Alle Fragen zusammenfassen
-  export const allQuestions = [questions1, questions2];
+  export const allQuizzes = [questions1, questions2];
   
