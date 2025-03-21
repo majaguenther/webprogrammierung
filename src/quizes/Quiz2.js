@@ -1,12 +1,8 @@
-import { useContext, useState } from "react";
-import { ScoreContext } from "./ScoreContext";
+import { useState } from "react";
 import './Quiz.css';
-import { useNavigate } from 'react-router-dom';
-
-
 
 const questions = [
-  { question: "Welche ist die Hauptstadt von Deutschland?", options: ["Berlin", "München", "Hamburg", "Köln"], answer: "Berlin" },
+  { question: "Was ist die Hauptstadt von Deutschland?", options: ["Berlin", "München", "Hamburg", "Köln"], answer: "Berlin" },
   { question: "Welches Element hat das chemische Symbol O?", options: ["Gold", "Sauerstoff", "Silber", "Helium"], answer: "Sauerstoff" },
   { question: "Wie viele Kontinente gibt es?", options: ["5", "6", "7", "8"], answer: "7" },
   { question: "Wer schrieb 'Faust'?", options: ["Goethe", "Schiller", "Lessing", "Kafka"], answer: "Goethe" },
@@ -18,11 +14,10 @@ const questions = [
   { question: "Wie viele Monate haben 28 Tage?", options: ["1", "6", "12", "9"], answer: "12" },
 ];
 
-function QuizPage() {
-  const { setScore } = useContext(ScoreContext);
-  const [answers, setAnswers] = useState({});
-  const navigate = useNavigate();
 
+function QuizPage() {
+  const [answers, setAnswers] = useState({});
+  const [score, setScore] = useState(null);
 
   const handleSelect = (qIndex, option) => {
     setAnswers((prev) => ({ ...prev, [qIndex]: option }));
@@ -33,33 +28,33 @@ function QuizPage() {
     questions.forEach((q, index) => {
       if (answers[index] === q.answer) correct++;
     });
-    setScore(correct); // Store in Context
-    navigate ("/result");
+    setScore(correct);
   };
 
   return (
-      <div className="quiz-container">
-        <h1>Hauptstädte raten</h1>
-        <div>
-          {questions.map((q, qIndex) => (
-              <div key={qIndex} className="question-container">
-                <p><strong>{q.question}</strong></p>
-                <div>
-                  {q.options.map((option, oIndex) => (
-                      <button
-                          key={oIndex}
-                          className={`answer-button ${answers[qIndex] === option ? 'selected' : ''}`}
-                          onClick={() => handleSelect(qIndex, option)}
-                      >
-                        {option}
-                      </button>
-                  ))}
-                </div>
-              </div>
-          ))}
-        </div>
-        <button className="submit-button" onClick={handleSubmit}>Ergebnis anzeigen</button>
+    <div className="quiz-container">
+      <h1>Quiz</h1>
+      <div>
+        {questions.map((q, qIndex) => (
+          <div key={qIndex} className="question-container">
+            <p><strong>{q.question}</strong></p>
+            <div>
+              {q.options.map((option, oIndex) => (
+                <button
+                  key={oIndex}
+                  className={`answer-button ${answers[qIndex] === option ? 'selected' : ''}`}
+                  onClick={() => handleSelect(qIndex, option)}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
+      <button className="submit-button" onClick={handleSubmit}>Ergebnis anzeigen</button>
+      {score !== null && <p className="result-text">Du hast {score} von 10 richtig!</p>}
+    </div>
   );
 }
 
