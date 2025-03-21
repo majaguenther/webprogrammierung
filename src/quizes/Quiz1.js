@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { ScoreContext } from "./ScoreContext";
 import './Quiz.css';
 import { useNavigate } from 'react-router-dom';
-import { allQuestions } from './quizes/questions';
+import { allQuestions } from './questions';
 
 function QuizPage({ quizIndex }) {
   const questions = allQuestions[quizIndex];
@@ -27,9 +27,9 @@ function QuizPage({ quizIndex }) {
 
   return (
       <div className="quiz-container">
-        <h1>Hauptstädte raten</h1>
+        <h1>{ questions[0].title }</h1>
         <div>
-          {questions.map((q, qIndex) => (
+          {questions.slice(1).map((q, qIndex) => (
               <div key={qIndex} className="question-container">
                 <p><strong>{q.question}</strong></p>
                 <div>

@@ -1,6 +1,5 @@
-// src/questions.js
-
 export const questions1 = [
+    { title: "Titel2" },
     { question: "Was ist die Hauptstadt von Deutschland?", options: ["Berlin", "München", "Hamburg", "Köln"], answer: "Berlin" },
     { question: "Welches Element hat das chemische Symbol O?", options: ["Gold", "Sauerstoff", "Silber", "Helium"], answer: "Sauerstoff" },
     { question: "Wie viele Kontinente gibt es?", options: ["5", "6", "7", "8"], answer: "7" },
@@ -14,6 +13,7 @@ export const questions1 = [
   ];
   
   export const questions2 = [
+    { title: "Titel!"},
     { question: "wegowejg", options: ["Berlin", "München", "Hamburg", "Köln"], answer: "Berlin" },
     { question: "Welches Element hat das chemische Symbol O?", options: ["Gold", "Sauerstoff", "Silber", "Helium"], answer: "Sauerstoff" },
     { question: "Wie viele Kontinente gibt es?", options: ["5", "6", "7", "8"], answer: "7" },
