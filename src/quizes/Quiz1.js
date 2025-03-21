@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Quiz.css'
+import './Quiz.css';
 
 const questions = [
   { question: "Was ist die Hauptstadt von Deutschland?", options: ["Berlin", "München", "Hamburg", "Köln"], answer: "Berlin" },
@@ -31,40 +31,28 @@ function QuizPage() {
   };
 
   return (
-    <div style={{ maxWidth: "600px", margin: "0 auto", padding: "20px" }}>
-      <h1 style={{ textAlign: "center" }}>Quiz</h1>
+    <div className="quiz-container">
+      <h1>Quiz</h1>
       <div>
         {questions.map((q, qIndex) => (
-          <div key={qIndex} style={{ border: "1px solid #ccc", padding: "10px", marginBottom: "10px" }}>
+          <div key={qIndex} className="question-container">
             <p><strong>{q.question}</strong></p>
-            <div >
+            <div>
               {q.options.map((option, oIndex) => (
-                <div className="answer-button">
-                  <button
-                    key={oIndex}
-                    
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      padding: "10px",
-                      margin: "5px 0",
-                      backgroundColor: answers[qIndex] === option ? "#007BFF" : "#f0f0f0",
-                      color: answers[qIndex] === option ? "white" : "black",
-                      border: "none",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => handleSelect(qIndex, option)}
-                  >
-                    {option}
-                  </button>
-                </div>
+                <button
+                  key={oIndex}
+                  className={`answer-button ${answers[qIndex] === option ? 'selected' : ''}`}
+                  onClick={() => handleSelect(qIndex, option)}
+                >
+                  {option}
+                </button>
               ))}
             </div>
           </div>
         ))}
       </div>
-      <button onClick={handleSubmit} style={{ width: "100%", padding: "10px", marginTop: "10px", backgroundColor: "#28a745", color: "white", border: "none", cursor: "pointer" }}>Ergebnis anzeigen</button>
-      {score !== null && <p style={{ textAlign: "center", marginTop: "10px" }}>Du hast {score} von 10 richtig!</p>}
+      <button className="submit-button" onClick={handleSubmit}>Ergebnis anzeigen</button>
+      {score !== null && <p className="result-text">Du hast {score} von 10 richtig!</p>}
     </div>
   );
 }
