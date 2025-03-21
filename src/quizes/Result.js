@@ -52,7 +52,7 @@ function Result() {
                     {q.options.map((option, oIndex) => (
                       <button
                         key={oIndex}
-                        className={`answer-button ${option === selectedAnswers[qIndex] ? 'correct' : ''} ${option === q.answer ? 'wrong' : ''}`}
+                        className={`answer-button ${option === selectedAnswers[qIndex] ? 'wrong' : ''} ${option === q.answer ? 'correct' : ''}`}
                       >
                         {option}
                       </button>
