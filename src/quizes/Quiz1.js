@@ -1,35 +1,35 @@
 import { useContext, useState } from "react";
-import { ScoreContext } from "./ScoreContext";
+import { ResultContext } from "./ResultContext";
 import './Quiz.css';
 import { useNavigate } from 'react-router-dom';
-import { allQuestions } from './questions';
+import { allQuizzes } from './questions';
 
 function QuizPage({ quizIndex }) {
-  const questions = allQuestions[quizIndex];
+  const quiz = allQuizzes[quizIndex];
+  const title = quiz[0].title;
+  const questions = quiz.slice(1);
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate();
-    const { setScore } = useContext(ScoreContext);
-
-
 
   const handleSelect = (qIndex, option) => {
     setAnswers((prev) => ({ ...prev, [qIndex]: option }));
+    setAnswers((prevAnswers) => ({
+      ...prevAnswers,
+      [qIndex]: option,
+    }));
   };
 
   const handleSubmit = () => {
-    let correct = 0;
-    questions.forEach((q, index) => {
-      if (answers[index] === q.answer) correct++;
-    });
-    setScore(correct); 
-    navigate ("/result");
+    const selectedAnswers = questions.map((_, index) => answers[index] || 0); 
+    navigate("/result", { state: { selectedAnswers: selectedAnswers, quizIndex: quizIndex }});
+    window.scrollTo(0, 0);
   };
 
   return (
       <div className="quiz-container">
-        <h1>{ questions[0].title }</h1>
+        <h1>{ title }</h1>
         <div>
-          {questions.slice(1).map((q, qIndex) => (
+          {questions.map((q, qIndex) => (
               <div key={qIndex} className="question-container">
                 <p><strong>{q.question}</strong></p>
                 <div>

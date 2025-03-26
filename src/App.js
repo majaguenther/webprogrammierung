@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import Quiz from './quizes/Quiz1';
-import Quiz2 from './quizes/Quiz2';
 import Result from './quizes/Result';
 import './App.css';
 
