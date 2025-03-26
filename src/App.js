@@ -21,12 +21,10 @@ function App() {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/quiz1" element={<Quiz quizIndex={0} />} />
-                         <Route path="/quiz2" element={<Quiz quizIndex={1} />} />
-                        <Route path="/result" element={<Result />} />
                         {[...Array(12)].map((_, i) => (
-                            <Route key={i} path={`/page${i + 1}`} element={<Page title={`Page ${i + 1}`} />} />
+                            <Route path={`/quiz${i}`} element={<Quiz quizIndex={i} />} />
                         ))}
+                        <Route path="/result" element={<Result />} />
                     </Routes>
                 </div>
             </Router>
