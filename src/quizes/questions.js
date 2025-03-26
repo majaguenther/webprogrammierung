@@ -112,6 +112,16 @@ export const questions9 = [
   { question: "Wie lautet die Lichtgeschwindigkeit c?", options: ["299.792.458 m/s", "299.792.458 cm/s", "299.792.458 km/s", "299.792.458 dm/s"], answer: "299.792.458 m/s" },
   { question: "Wie lautet pi?", options: ["3,14159", "3,41459", "4,13159", "1,43459"], answer: "3,14159" }
 ];
-  
+
+export const questions10 = [
+  { title: "RBB" },
+  { question: "Wie viele Mitarbeitende hat der RBB? *2023", options: ["ca. 2100", "ca. 500", "ca. 1800", "ca. 3300"], answer: "ca. 2100" },
+  { question: "Wie hoch ist der Marktanteil von RBB Fernsehen?", options: ["6%", "14%", "3%", "10%"], answer: "6%" },
+  { question: "Was ist das Durchschnittsalter der RBB Mitarbeitenden?", options: ["49", "53", "35", "42"], answer: "49" },
+  { question: "Welches Thema hatte im RBB die meiste Sendezeit?", options: ["Politik & Gesellschaft", "Spielfilme", "Unterhaltung", "Bildung & Beratung"], answer: "Politik & Gesellschaft" },
+  { question: "Wie viel vom Rundfunkbeitrag geht an den RBB? *2022", options: ["2,36€", "0,98€", "1,97€", "1,23€"], answer: "2,36€" },
+  { question: "Welches Radioprogramm des RBB's kostet pro Minute am wenigsten?", options: ["radioBerlin 88.8", "Fritz", "Radioeins", "Antenne Brandenburg"], answer: "radioBerlin 88.8" },
+];
+
   // Alle Fragen zusammenfassen
-  export const allQuizzes = [questions1, questions2, questions3, questions4, questions5, questions6, questions7, questions8, questions9];
+  export const allQuizzes = [questions1, questions2, questions3, questions4, questions5, questions6, questions7, questions8, questions9, questions10];
