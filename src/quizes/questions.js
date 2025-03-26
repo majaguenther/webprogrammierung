@@ -27,7 +27,7 @@ export const questions2 = [
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/41_7.png", options: ["Mühle", "Brettspiel", "Kaffee", "Niederlande"], answer: "Mühle" },
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/41_8.png", options: ["Strand", "Meer", "Sand", "Buddeln"], answer: "Sand" },
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/41_9.png", options: ["Brücke", "Yoga", "Metropole", "Lachen"], answer: "Brücke" },
-  { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/41_10.png", options: ["Essen", "Muschel", "Ohr", "Geige"], answer: "Muschel" },
+  { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/41_10.png", options: ["Essen", "Schnecke", "Ohr", "Geige"], answer: "Schnecke" },
 ];
 
 export const questions3 = [

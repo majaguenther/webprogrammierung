@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import ImageComponent from "../Components/ImageComponent";
 import './Quiz.css';
 import { allQuizzes } from './questions';
 
@@ -58,6 +59,7 @@ function Result() {
             {questions.map((q, qIndex) => (
                 <div key={qIndex} className="question-container">
                   <p><strong>{q.question}</strong></p>
+                  <ImageComponent imagePath={q.imagePath} className="image-container" />
                   <div>
                     {q.options.map((option, oIndex) => (
                       <button
