@@ -6,16 +6,16 @@ import './Home.css';
 const tiles = [
     { title: "quiz", path: "/quiz1" },
     { title: "Quiz 2", path: "/quiz2" },
-    { title: "Page 3", path: "/page3" },
-    { title: "Page 4", path: "/page4" },
-    { title: "Page 5", path: "/page5" },
-    { title: "Page 6", path: "/page6" },
-    { title: "Page 7", path: "/page7" },
-    { title: "Page 8", path: "/page8" },
-    { title: "Page 9", path: "/page9" },
-    { title: "Majas Quiz", path: "/page10" },
-    { title: "Joshs Quiz", path: "/page11" },
-    { title: "Chrissis Quiz", path: "/page12" },
+    { title: "Page 3", path: "/quiz3" },
+    { title: "Page 4", path: "/quiz4" },
+    { title: "Page 5", path: "/quiz5" },
+    { title: "Page 6", path: "/quiz6" },
+    { title: "Page 7", path: "/quiz7" },
+    { title: "Page 8", path: "/quiz8" },
+    { title: "Page 9", path: "/quiz9" },
+    { title: "Majas Quiz", path: "/quiz10" },
+    { title: "Joshs Quiz", path: "/quiz11" },
+    { title: "Chrissis Quiz", path: "/quiz12" },
 ];
 
 function Home() {

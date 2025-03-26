@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { ResultContext } from "./ResultContext";
+import ImageComponent from "../Components/ImageComponent";
 import './Quiz.css';
 import { useNavigate } from 'react-router-dom';
 import { allQuizzes } from './questions';
@@ -25,6 +26,8 @@ function QuizPage({ quizIndex }) {
     window.scrollTo(0, 0);
   };
 
+  let image = "./TestImages/Pubquiz.jpg"
+
   return (
       <div className="quiz-container">
         <h1>{ title }</h1>
@@ -32,6 +35,7 @@ function QuizPage({ quizIndex }) {
           {questions.map((q, qIndex) => (
               <div key={qIndex} className="question-container">
                 <p><strong>{q.question}</strong></p>
+                <ImageComponent imagePath={image} className="image-container" />
                 <div>
                   {q.options.map((option, oIndex) => (
                       <button
