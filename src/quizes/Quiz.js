@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
-import { ResultContext } from "./ResultContext";
-import ImageComponent from "../Components/ImageComponent";
+import ImageComponent from "../components/ImageComponent";
 import './Quiz.css';
 import { useNavigate } from 'react-router-dom';
 import { allQuizzes } from './questions';

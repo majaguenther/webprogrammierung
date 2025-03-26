@@ -1,29 +1,8 @@
 import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import ImageComponent from "../Components/ImageComponent";
+import ImageComponent from "../components/ImageComponent";
 import './Quiz.css';
 import { allQuizzes } from './questions';
-
-const checkAnswer = (question, answer) => {
-  if (question.answer == answer) {
-    return true;
-  }
-  return false;
-}
-
-const countCorrectAnswers = (questions, selectedAnswers) => {
-    let correctCount = 0;
-  
-    // Iteriere durch die Fragen und vergleiche mit den ausgewählten Antworten
-    for (let i = 0; i < questions.length; i++) {
-      // Vergleiche die ausgewählte Antwort mit der richtigen Antwort
-      if (checkAnswer(questions[i], selectedAnswers[i])) {
-        correctCount++;
-      }
-    }
-  
-    return correctCount;
-  };
 
 function Result() {
     const location = useLocation();
@@ -41,8 +20,6 @@ function Result() {
     questions.forEach((q, index) => {
       if (questions[index].answer === selectedAnswers[index]) correct++;
     });
-
-    const score = countCorrectAnswers(questions, selectedAnswers);
 
     const handleHome = () => {
       navigate("/");

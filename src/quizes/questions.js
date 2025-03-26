@@ -161,6 +161,4 @@ export const questions11 = [
   { question: "Zu welchem Land gehört diese Flagge?", imagePath: "./images/flaggen_10.png", options: ["Afghanistan", "Äquatorialguinea", "Andorra", "Angola"], answer: "Afghanistan" },
 ];
 
-
-  // Alle Fragen zusammenfassen
   export const allQuizzes = [questions1, questions2, questions3, questions4, questions5, questions6, questions7, questions8, questions9, questions10, questions11];
