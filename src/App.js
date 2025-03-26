@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Quiz from './quizes/Quiz1';
 import Result from './quizes/Result';
+import { allQuizzes } from './quizes/questions';
 import './App.css';
 
 const Page = ({ title }) => (
@@ -21,8 +22,8 @@ function App() {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        {[...Array(12)].map((_, i) => (
-                            <Route path={`/quiz${i}`} element={<Quiz quizIndex={i} />} />
+                        {allQuizzes.map((quiz, index) => (
+                            <Route path={quiz[1].path} element={<Quiz quizIndex={index} />} />
                         ))}
                         <Route path="/result" element={<Result />} />
                     </Routes>

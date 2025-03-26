@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import './Quiz.css';
 import { allQuizzes } from './questions';
 
@@ -26,12 +26,15 @@ const countCorrectAnswers = (questions, selectedAnswers) => {
 
 function Result() {
     const location = useLocation();
+    const navigate = useNavigate();
     const { selectedAnswers, quizIndex = 0} = location.state || {};
 
     console.log("Antworten: ", selectedAnswers);
 
     const quiz = allQuizzes[quizIndex] || {};
-    const questions = quiz.slice(2);
+    const questions = quiz.slice(3);
+
+    let totalQuestions = questions.length;
 
     let correct = 0;
     questions.forEach((q, index) => {
@@ -40,10 +43,17 @@ function Result() {
 
     const score = countCorrectAnswers(questions, selectedAnswers);
 
+    const handleHome = () => {
+      navigate("/");
+      window.scrollTo(0, 0);
+    };
+
     return (
         <div className="quiz-container">
           <h1> Dein Ergebnis </h1>
-          {correct !== null ? <p>Du hast {correct} von 10 richtig!</p> : <p>Du hast bestimmt super gespielt, leider gab es ein Fehler bei der Auswertung!</p>}
+          {correct !== null ? <p>Du hast {correct} von {totalQuestions} richtig!</p> : <p>Du hast bestimmt super gespielt, leider gab es ein Fehler bei der Auswertung!</p>}
+          <button className="submit-button" onClick={handleHome}>Hauptmenü</button>
+          <p></p>
           <div>
             {questions.map((q, qIndex) => (
                 <div key={qIndex} className="question-container">
@@ -61,6 +71,7 @@ function Result() {
                 </div>
             ))}
           </div>
+          <button className="submit-button" onClick={handleHome}>Hauptmenü</button>
         </div>
     );
 }

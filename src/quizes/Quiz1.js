@@ -8,7 +8,8 @@ import { allQuizzes } from './questions';
 function QuizPage({ quizIndex }) {
   const quiz = allQuizzes[quizIndex];
   const title = quiz[0].title;
-  const questions = quiz.slice(2);
+  const generalNote = quiz[2].generalNote;
+  const questions = quiz.slice(3);
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate();
 
@@ -26,11 +27,10 @@ function QuizPage({ quizIndex }) {
     window.scrollTo(0, 0);
   };
 
-  let image = "./TestImages/Pubquiz.jpg"
-
   return (
       <div className="quiz-container">
         <h1>{ title }</h1>
+        <p>{ generalNote }</p>
         <div>
           {questions.map((q, qIndex) => (
               <div key={qIndex} className="question-container">
