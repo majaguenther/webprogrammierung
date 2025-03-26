@@ -18,11 +18,11 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #6c4774;
 }
 
 .question-container {
-    border: 1px solid #ccc;
+    border: 1px solid #eee6ee;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -37,7 +37,7 @@ p strong {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    background-color: #f0f0f0;
+    background-color: #eee6ee;
     color: black;
     border: none;
     border-radius: 10px;
@@ -46,30 +46,41 @@ p strong {
 }
 
 .answer-button.selected {
-    background-color: #007BFF;
+    background-color: #9e70a2;
     color: white;
 }
 
 .answer-button.wrong {
-    background-color: #d02222;
+    background-color: #d44d4d;
+    color: white;
+}
+
+.answer-button.wrong:hover {
+    background-color: #e55d5d;
     color: white;
 }
 
 .answer-button.correct {
-    background-color: #3ec412;
+    background-color: #6a9e6c;
+    color: white;
+}
+
+.answer-button.correct:hover {
+    background-color: #7fb77e;
     color: white;
 }
 
 .answer-button:hover {
-    background-color: #61dafb;
+    background-color: #d6c7dd;
     transform: scale(1.05);
+    color: black;
 }
 
 .submit-button {
     width: 40%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #28a745;
+    background-color: #78a86a;
     color: white;
     border: none;
     border-radius: 10px;
@@ -78,7 +89,7 @@ p strong {
 }
 
 .submit-button:hover {
-    background-color: #218838;
+    background-color: #8cbd89;
 }
 
 .result-text {
