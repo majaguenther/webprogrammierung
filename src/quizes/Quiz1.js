@@ -35,7 +35,7 @@ function QuizPage({ quizIndex }) {
           {questions.map((q, qIndex) => (
               <div key={qIndex} className="question-container">
                 <p><strong>{q.question}</strong></p>
-                <ImageComponent imagePath={image} className="image-container" />
+                <ImageComponent imagePath={q.imagePath} className="image-container" />
                 <div>
                   {q.options.map((option, oIndex) => (
                       <button
