@@ -50,6 +50,11 @@ p strong {
     color: white;
 }
 
+.answer-button.selected:hover {
+    background-color: #9e70a2;
+    color: white;
+}
+
 .answer-button.wrong {
     background-color: #d44d4d;
     color: white;
