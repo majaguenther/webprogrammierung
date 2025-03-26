@@ -26,10 +26,32 @@ function Result() {
       window.scrollTo(0, 0);
     };
 
+    //lustigen Satz nach der Auswertung anzeigen
+    const answersOptions = {
+      good: ["Oha voll gut!", "Das ist total toll!", "Weiter so!", "Wie schön!"],
+      middle: ["Da geht noch was!", "Na beim nächsten mal wird es vielleicht besser"],
+      bad: ["Was war da los??", "Oh weh oh weh.", "Machste nix."]
+    };
+    let answer = "sdsf";
+    let correctPercantage = correct / totalQuestions;
+    if (correctPercantage > 0.75)
+    {
+      answer = answersOptions.good[Math.floor(Math.random() * answersOptions.good.length)];
+    }
+    else if (correctPercantage > 0.25)
+    {
+      answer = answersOptions.middle[Math.floor(Math.random() * answersOptions.middle.length)];
+    }
+    else
+    {
+      answer = answersOptions.bad[Math.floor(Math.random() * answersOptions.bad.length)];
+    }
+
     return (
         <div className="quiz-container">
           <h1> Dein Ergebnis </h1>
-          {correct !== null ? <p>Du hast {correct} von {totalQuestions} richtig!</p> : <p>Du hast bestimmt super gespielt, leider gab es ein Fehler bei der Auswertung!</p>}
+          {correct !== null ? <p>Du hast {correct} von {totalQuestions} richtig! {answer}</p> : <p>Du hast bestimmt super gespielt, leider gab es ein Fehler bei der Auswertung!</p>}
+          <p></p>
           <button className="submit-button" onClick={handleHome}>Hauptmenü</button>
           <p></p>
           <div>
