@@ -1,5 +1,6 @@
 export const questions1 = [
   { title: "Hauptstädte raten!" },
+  { generalNote: "" },
   { question: "Welche ist die Hauptstadt von Deutschland?", imagePath: "", options: ["Berlin", "München", "Hamburg", "Köln"], answer: "Berlin" },
   { question: "Welche ist die Hauptstadt von Lettland?", imagePath: "", options: ["Liepaja", "Jelgava", "Riga", "Windau"], answer: "Riga" },
   { question: "Welche ist die Hauptstadt der Türkei?", imagePath: "", options: ["Antalya", "Izmir", "Ankara", "Istanbul"], answer: "Ankara" },
@@ -14,6 +15,7 @@ export const questions1 = [
 
 export const questions2 = [
   { title: "4 Bilder, 1 Wort" },
+  { generalNote: "" },
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "", options: ["Gärtner", "Erde", "Globus", "Pflanzen"], answer: "Gärtner" },
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "", options: ["Fußball", "Ball", "Barock", "Golf"], answer: "Fußball" },
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "", options: ["Berlin", "Tor", "Garage", "Fußball"], answer: "Berlin" },
@@ -28,6 +30,7 @@ export const questions2 = [
 
 export const questions3 = [
   { title: "Bist du farbenblind?" },
+  { generalNote: "" },
   { question: "Welche Zahl erkennst du?", imagePath: "", options: ["13", "12", "2", "21"], answer: "12" },
   { question: "Welche Zahl erkennst du?", imagePath: "", options: ["7", "74", "14", "4"], answer: "74" },
   { question: "Welche Zahl erkennst du?", imagePath: "", options: ["8", "6", "9", "3"], answer: "6" },
@@ -42,6 +45,7 @@ export const questions3 = [
 
 export const questions4 = [
   { title: "Chrissis Quiz" },
+  { generalNote: "" },
   { question: "In der wie vielten Nachprüfung ist Chrissi für Analysis, stand 22.03.2025?", imagePath: "", options: ["sofort bestanden natürlich!", "3", "1", "4"], answer: "3" },
   { question: "Welche Note hat Chrissi in Einführung in die Programmierung im 1. Semester?", imagePath: "", options: ["1.3, aber fast 1.0!", "Natürlich 1.0 wegen des tollen Dozenten!", "Mit 4.0 gerade so bestanden!", "3.0, aber nur weil er geschummelt hat"], answer: "Natürlich 1.0 wegen des tollen Dozenten!" },
   { question: "Wie viele Punkte hatte Chrissi in der ersten Analysis Klausur?", imagePath: "", options: ["Fast 10", "ca. 22", "mit 50 bestanden!", "er hat ganz locker 95 geholt"], answer: "ca. 22" },
@@ -51,6 +55,7 @@ export const questions4 = [
 
 export const questions5 = [
   { title: "Deutsche Städte" },
+  { generalNote: "" },
   { question: "Welche deutsche Stadt zieht jährlich die meisten internationalen Touristen an?", imagePath: "", options: ["Hamburg", "München", "Frankfurt", "Berlin"], answer: "Berlin" },
   { question: "Welche Stadt gilt als das kulturelle Zentrum Deutschlands mit zahlreichen Theatern, Museen und Galerien?", imagePath: "", options: ["Stuttgart", "Köln", "Düsseldorf", "Berlin"], answer: "Berlin" },
   { question: "Welche deutsche Stadt ist bekannt für ihr außergewöhnlich vielfältiges Nachtleben und ihre Clubkultur?", imagePath: "", options: ["Hannover", "Dresden", "Castrop-Rauxel", "Berlin"], answer: "Berlin" },
@@ -66,6 +71,7 @@ export const questions5 = [
 
 export const questions6 = [
   { title: "Geographie" },
+  { generalNote: "" },
   { question: "In welchem Land liegt der nördlichste Punkt Europas Festland?", imagePath: "", options: ["Norwegen", "Schweden", "Finnland", "Island"], answer: "Norwegen" },
   { question: "Wie viele Zeitzonen hat China?", imagePath: "", options: ["1", "2", "3", "4"], answer: "1" },
   { question: "Welches Land hat die meisten Zeitzonen?", imagePath: "", options: ["Frankreich", "USA", "Indien", "Russland"], answer: "Frankreich" },
@@ -78,6 +84,7 @@ export const questions6 = [
 
 export const questions7 = [
   { title: "Majas Quiz" },
+  { generalNote: "" },
   { question: "Wieso hat es für Maja in Analysis nur für 50/100 Punkten gereicht?", imagePath: "", options: ["Weil sie nicht richtig durchgestrichen hat und zwei Aufgaben nicht gewertet wurden.", "Sie hat ihren Taschenrechner vergessen…", "Maja kann gar kein Mathe.", "Sie hat Flo 10€ gegeben, damit er ihre Klausur mit Perücke schreibt."], answer: "Weil sie nicht richtig durchgestrichen hat und zwei Aufgaben nicht gewertet wurden." },
   { question: "Wie hat Maja eine 1,0 in der BWL Klausur geschafft?", imagePath: "", options: ["Sie hat sich ausführlich vorbereitet.", "Sie ist eine Frau.", "Sie hat eine Frage gestellt und der Dozent hat ihr alle Antworten verraten.", "Das ist allen hier unklar."], answer: "Sie hat sich ausführlich vorbereitet." },
   { question: "Wie haben Maja und Josh volle Punktzahl im IT&Gesellschaft Prüfungsgespräch erreicht?", imagePath: "", options: ["Das Gespräch wurde von 20 auf 7 Minuten gekürzt, weil bei den Gruppen davor überzogen wurde.", "Joshs einziger Satz war so überzeugend.", "Haben sie nicht, Josh hat nur einen Satz gesagt.", "Weil sie sich ausführlich vorbereitet haben."], answer: "Das Gespräch wurde von 20 auf 7 Minuten gekürzt, weil bei den Gruppen davor überzogen wurde." },
@@ -88,6 +95,7 @@ export const questions7 = [
 
 export const questions8 = [
   { title: "Zuckerwürfel" },
+  { generalNote: "" },
   { question: "Wie viele Würfel Zucker enthält ein Glas Barilla Tomatensoße (400g)?", imagePath: "", options: ["8", "16", "4", "9"], answer: "8" },
   { question: "Wie viele Würfel Zucker enthält ein Glas Landliebe Himbeer-Marmelade (200g)?", imagePath: "", options: ["37", "2", "14", "45"], answer: "37" },
   { question: "Wie viele Würfel Zucker enthält eine Flasche Cola (0,5l)?", imagePath: "", options: ["18", "7", "3", "30"], answer: "18" },
@@ -102,6 +110,7 @@ export const questions8 = [
 
 export const questions9 = [
   { title: "Konstanten" },
+  { generalNote: "" },
   { question: "Welchen Wert beträgt der Erdradius?", imagePath: "", options: ["6371 km", "4500 km", "10345 km", "4750 km"], answer: "6371 km" },
   { question: "Wie lautet die absolute Nullpunkttemperatur?", imagePath: "", options: ["-273,15°C", "-0°C", "-100°C", "-365°C"], answer: "-273,15°C" },
   { question: "Wie lautet die Dichte von Wasser?", imagePath: "", options: ["1 g/cm^3", "10 g/cm^3", "11 g/cm^3", "1 g/dm^3"], answer: "1 g/cm^3" },
@@ -115,6 +124,7 @@ export const questions9 = [
 
 export const questions10 = [
   { title: "RBB" },
+  { generalNote: "" },
   { question: "Wie viele Mitarbeitende hat der RBB? *2023", imagePath: "", options: ["ca. 2100", "ca. 500", "ca. 1800", "ca. 3300"], answer: "ca. 2100" },
   { question: "Wie hoch ist der Marktanteil von RBB Fernsehen?", imagePath: "", options: ["6%", "14%", "3%", "10%"], answer: "6%" },
   { question: "Was ist das Durchschnittsalter der RBB Mitarbeitenden?", imagePath: "", options: ["49", "53", "35", "42"], answer: "49" },
@@ -125,6 +135,7 @@ export const questions10 = [
 
 export const questions11 = [
   { title: "Flaggen" },
+  { generalNote: "" },
   { question: "Zu welchem Land gehört diese Flagge?", imagePath: "", options: ["Kambodscha", "Kolumbien", "Kasachstan", "Kirgistan"], answer: "Kambodscha" },
   { question: "Zu welchem Land gehört diese Flagge?", imagePath: "", options: ["Mauritius", "Malediven", "Moldawien", "Malawi"], answer: "Mauritius" },
   { question: "Zu welchem Land gehört diese Flagge?", imagePath: "", options: ["Sri Lanka", "Samoa", "San Marino", "Sambia"], answer: "Sri Lanka" },
