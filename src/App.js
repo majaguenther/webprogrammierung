@@ -21,8 +21,6 @@ function App() {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/quiz1" element={<Quiz quizIndex={0} />} />
-                        <Route path="/quiz2" element={<Quiz quizIndex={1} />} />
                         {[...Array(12)].map((_, i) => (
                             <Route path={`/quiz${i}`} element={<Quiz quizIndex={i} />} />
                         ))}
