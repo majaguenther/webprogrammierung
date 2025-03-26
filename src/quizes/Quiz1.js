@@ -8,7 +8,7 @@ import { allQuizzes } from './questions';
 function QuizPage({ quizIndex }) {
   const quiz = allQuizzes[quizIndex];
   const title = quiz[0].title;
-  const questions = quiz.slice(1);
+  const questions = quiz.slice(2);
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate();
 
@@ -35,7 +35,7 @@ function QuizPage({ quizIndex }) {
           {questions.map((q, qIndex) => (
               <div key={qIndex} className="question-container">
                 <p><strong>{q.question}</strong></p>
-                <ImageComponent imagePath={image} className="image-container" />
+                <ImageComponent imagePath={q.imagePath} className="image-container" />
                 <div>
                   {q.options.map((option, oIndex) => (
                       <button
