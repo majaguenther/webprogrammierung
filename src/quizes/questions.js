@@ -123,5 +123,20 @@ export const questions10 = [
   { question: "Welches Radioprogramm des RBB's kostet pro Minute am wenigsten?", options: ["radioBerlin 88.8", "Fritz", "Radioeins", "Antenne Brandenburg"], answer: "radioBerlin 88.8" },
 ];
 
+export const questions11 = [
+  { title: "Flaggen" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Kambodscha", "Kolumbien", "Kasachstan", "Kirgistan"], answer: "Kambodscha" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Mauritius", "Malediven", "Moldawien", "Malawi"], answer: "Mauritius" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Sri Lanka", "Samoa", "San Marino", "Sambia"], answer: "Sri Lanka" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Tansania", "Tadschikistan", "Taiwan", "Tschad"], answer: "Tansania" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Simbabwe", "Sierra Leone", "Senegal", "Schweden"], answer: "Simbabwe" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Seychellen", "Somalia", "Schweiz", "San Marino"], answer: "Seychellen" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Oman", "Österreich", "Osttimor", "Ottawa"], answer: "Oman" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Nicaragua", "Niger", "Nigeria", "Nordmazedonien"], answer: "Nicaragua" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Brunei", "Bhutan", "Belize", "Belarus"], answer: "Brunei" },
+  { question: "Zu welchem Land gehört diese Flagge?", options: ["Afghanistan", "Äquatorialguinea", "Andorra", "Angola"], answer: "Afghanistan" },
+];
+
+
   // Alle Fragen zusammenfassen
-  export const allQuizzes = [questions1, questions2, questions3, questions4, questions5, questions6, questions7, questions8, questions9, questions10];
+  export const allQuizzes = [questions1, questions2, questions3, questions4, questions5, questions6, questions7, questions8, questions9, questions10, questions11];
