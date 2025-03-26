@@ -31,7 +31,7 @@ function Result() {
     console.log("Antworten: ", selectedAnswers);
 
     const quiz = allQuizzes[quizIndex] || {};
-    const questions = quiz.slice(1);
+    const questions = quiz.slice(2);
 
     let correct = 0;
     questions.forEach((q, index) => {
