@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import ImageComponent from "../components/ImageComponent";
+import ImageComponent from "../Components/ImageComponent";
 import './Quiz.css';
 import { allQuizzes } from './questions';
 

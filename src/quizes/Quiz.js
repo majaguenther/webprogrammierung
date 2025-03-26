@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import ImageComponent from "../components/ImageComponent";
+import ImageComponent from "../Components/ImageComponent";
 import './Quiz.css';
 import { useNavigate } from 'react-router-dom';
 import { allQuizzes } from './questions';
