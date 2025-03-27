@@ -50,7 +50,7 @@ function QuizPage({ quizIndex }) {
 
   const handleSubmit = () => {
     
-    const selectedAnswers = questions.map((_, index) => quiz[index].answers || 0); 
+    const selectedAnswers = questions.map((_, index) => quiz.questions[index].answers || 0); 
     navigate("/result", { state: { selectedAnswers: selectedAnswers, quizIndex: quizIndex }});
     window.scrollTo(0, 0);
     
