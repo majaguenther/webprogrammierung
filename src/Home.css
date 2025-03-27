@@ -11,7 +11,7 @@
 }
 
 .grid-item {
-    background-color: #282c34;
+    background-color: #6c4774;
     color: white;
     padding: 20px;
     display: flex;
@@ -25,6 +25,6 @@
 }
 
 .grid-item:hover {
-    background-color: #61dafb;
-    transform: scale(1.05);
+    background-color: #9e70a2;
+    transform: scale(1.03);
 }
