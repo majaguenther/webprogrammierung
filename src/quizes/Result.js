@@ -60,7 +60,7 @@ function Result() {
             {questions.map((q, qIndex) => (
                 <div key={qIndex} className="question-container">
                   <p><strong>{q.question}</strong></p>
-                  <ImageComponent imagePath={q.imagePath} className="image-question-image-container" />
+                  <ImageComponent imagePath={q.imagePath} className="image-question-container" />
                   <div>
                     {q.options.map((option, oIndex) => (
                       <button
