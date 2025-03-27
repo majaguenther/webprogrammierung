@@ -11,10 +11,12 @@ function Home() {
             <h1>Welcome to the Homepage</h1>
             <div className="grid-container">
                 {allQuizzes.map((quiz, index) => (
+                    <div>
                     <Link key={index} to={quiz[0].path} className="grid-item">
                         <ImageComponent imagePath={quiz[0].titleImage} className="image-question-container" />
                         {quiz[0].title}
                     </Link>
+                    </div>
                 ))}
             </div>
         </div>

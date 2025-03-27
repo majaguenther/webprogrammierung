@@ -50,7 +50,7 @@ function Result() {
 
     return (
         <div className="quiz-container">
-          <Confetti /> 
+
           <h1> Dein Ergebnis </h1>
           {correct !== null ? <p>Du hast {correct} von {totalQuestions} richtig! {answer}</p> : <p>Du hast bestimmt super gespielt, leider gab es ein Fehler bei der Auswertung!</p>}
           <p></p>
