@@ -1,4 +1,4 @@
-export const questions1 = [
+const questions1 = [
   { title: "Hauptstädte raten!", path: "/capitalcities", generalNote: "", titleImage: "./images/capitalcities/capitalcities.png" },
   { question: "Welche ist die Hauptstadt von Deutschland?", imagePath: "", options: ["Hamburg", "Berlin", "Köln", "München"], answer: "Berlin" },
   { question: "Welche ist die Hauptstadt von Lettland?", imagePath: "", options: ["Riga", "Jelgava", "Liepaja", "Windau"], answer: "Riga" },
@@ -12,7 +12,7 @@ export const questions1 = [
   { question: "Welche ist die Hauptstadt von Weißrussland?", imagePath: "", options: ["Minsk", "Wizebsk", "Brest", "Pinsk"], answer: "Minsk" },
 ];
 
-export const questions2 = [
+const questions2 = [
   { title: "4 Bilder, 1 Wort", path: "/4pics1word", generalNote: "", titleImage: "./images/4pics1word/4pics1word.png" },
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/4pics1word/41_1.png", options: ["Erde", "Gärtner", "Globus", "Pflanzen"], answer: "Gärtner" },
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/4pics1word/41_2.png", options: ["Golf", "Fußball", "Ball", "Barock"], answer: "Fußball" },
@@ -26,7 +26,7 @@ export const questions2 = [
   { question: "Welches Wort ergeben diese vier Bilder?", imagePath: "./images/4pics1word/41_10.png", options: ["Geige", "Essen", "Schnecke", "Ohr"], answer: "Schnecke" },
 ];
 
-export const questions3 = [
+const questions3 = [
   { title: "Bist du farbenblind?", path: "/colorblind", generalNote: "", titleImage: "./images/colorblind/colorblind.png" },
   { question: "Welche Zahl erkennst du?", imagePath: "./images/colorblind/color_1.jpg", options: ["21", "12", "2", "13"], answer: "12" },
   { question: "Welche Zahl erkennst du?", imagePath: "./images/colorblind/color_2.jpg", options: ["14", "7", "74", "4"], answer: "74" },
@@ -40,7 +40,7 @@ export const questions3 = [
   { question: "Welche Zahl erkennst du?", imagePath: "./images/colorblind/color_10.jpg", options: ["87", "97", "91", "81"], answer: "97" },
 ];
 
-export const questions4 = [
+const questions4 = [
   { title: "Chrissis Quiz", path: "/chrissiscoolurl", generalNote: "", titleImage: "./images/chrissi/Chrissi.png" },
   { question: "Wo ist Chrissi?", imagePath: "./images/DasIstWer.png", options: ["mitte", "rechts", "links"], answer: "links" },
   { question: "In der wie vielten Nachprüfung ist Chrissi für Analysis, stand 22.03.2025?", imagePath: "", options: ["4", "sofort bestanden natürlich!", "1", "3"], answer: "3" },
@@ -50,7 +50,7 @@ export const questions4 = [
   { question: "Warum hat Chrissi Embedded Systems bestanden?", imagePath: "", options: ["Weil Elektrotechnik so viel Spaß macht", "Weil er super duper schlau ist.", "Weil er mit Josh ganz viel gelernt hat.", "Weil er mit Josh immer bei Theo und Maja abgeguckt hat"], answer: "Weil er mit Josh immer bei Theo und Maja abgeguckt hat" },
 ];
 
-export const questions5 = [
+const questions5 = [
   { title: "Deutsche Städte", path: "/germancities", generalNote: "", titleImage: "./images/germancities/germancities.png" },
   { question: "Welche deutsche Stadt zieht jährlich die meisten internationalen Touristen an?", imagePath: "", options: ["München", "Hamburg", "Berlin", "Frankfurt"], answer: "Berlin" },
   { question: "Welche Stadt gilt als das kulturelle Zentrum Deutschlands mit zahlreichen Theatern, Museen und Galerien?", imagePath: "", options: ["Düsseldorf", "Berlin", "Köln", "Stuttgart"], answer: "Berlin" },
@@ -65,7 +65,7 @@ export const questions5 = [
   { question: "In welcher Stadt wohnen die nettesten Menschen?", imagePath: "", options: ["Bochum", "Berlin", "Castrop-Rauxel", "Heidelberg"], answer: "Bochum" }
 ];
 
-export const questions6 = [
+const questions6 = [
   { title: "Geographie", path: "/geography", generalNote: "", titleImage: "./images/geography/geography.png" },
   { question: "In welchem Land liegt der nördlichste Punkt Europas Festland?", imagePath: "", options: ["Finnland", "Norwegen", "Schweden", "Island"], answer: "Norwegen" },
   { question: "Wie viele Zeitzonen hat China?", imagePath: "", options: ["2", "3", "1", "4"], answer: "1" },
@@ -77,7 +77,7 @@ export const questions6 = [
   { question: "In welchem Land befindet sich der geografische Mittelpunkt Europas?", imagePath: "", options: ["Deutschland", "Slowakei", "Polen", "Litauen"], answer: "Litauen" }
 ];
 
-export const questions7 = [
+const questions7 = [
   { title: "Majas Quiz", path: "/ismajagenius", generalNote: "", titleImage: "./images/maja/Maja.png" },
   { question: "Wo ist Maja?", imagePath: "./images/DasIstWer.png", options: ["rechts", "mitte", "links"], answer: "mitte" },
   { question: "Wieso hat es für Maja in Analysis nur für 50/100 Punkten gereicht?", imagePath: "", options: ["Maja kann gar kein Mathe.", "Weil sie nicht richtig durchgestrichen hat und zwei Aufgaben nicht gewertet wurden.", "Sie hat Flo 10€ gegeben, damit er ihre Klausur mit Perücke schreibt.", "Sie hat ihren Taschenrechner vergessen…"], answer: "Weil sie nicht richtig durchgestrichen hat und zwei Aufgaben nicht gewertet wurden." },
@@ -87,7 +87,7 @@ export const questions7 = [
   { question: "Welche Note wird Maja in Spezielle mathematische Methoden erhalten?", imagePath: "", options: ["Eine glatte 1,0 (denn sie weiß ja jetzt, wie man richtig durchstreicht).", "Eine starke 1,3 (weil sie sich so ausführlich vorbereitet hat).", "Das weiß nur Frau Winter.", "4,0 (diesmal hatte sie wirklich keinen Taschenrechner)."], answer: "Eine glatte 1,0 (denn sie weiß ja jetzt, wie man richtig durchstreicht)." }
 ];
 
-export const questions8 = [
+const questions8 = [
   { title: "Zuckerwürfel", path: "/sugarcubes", generalNote: "", titleImage: "./images/sugarcubes/sugarcubes.png" },
   { question: "Wie viele Würfel Zucker enthält ein Glas Barilla Tomatensoße (400g)?", imagePath: "", options: ["9", "8", "16", "4"], answer: "8" },
   { question: "Wie viele Würfel Zucker enthält ein Glas Landliebe Himbeer-Marmelade (200g)?", imagePath: "", options: ["45", "2", "37", "14"], answer: "37" },
@@ -101,7 +101,7 @@ export const questions8 = [
   { question: "Wie viele Würfel Zucker stecken in einem Glas Nutella (450g)?", imagePath: "", options: ["20", "64", "100", "83"], answer: "83" }
 ];
 
-export const questions9 = [
+const questions9 = [
   { title: "Konstanten", path: "/constants", generalNote: "", titleImage: "./images/constants/constants.png" },
   { question: "Welchen Wert beträgt der Erdradius?", imagePath: "", options: ["4750 km", "6371 km", "4500 km", "10345 km"], answer: "6371 km" },
   { question: "Wie lautet die absolute Nullpunkttemperatur?", imagePath: "", options: ["-365°C", "-273,15°C", "-100°C", "-0°C"], answer: "-273,15°C" },
@@ -114,7 +114,7 @@ export const questions9 = [
   { question: "Wie lautet pi?", imagePath: "", options: ["3,14159", "4,13159", "1,43459", "3,41459"], answer: "3,14159" }
 ];
 
-export const questions10 = [
+const questions10 = [
   { title: "RBB", path: "/rbb", generalNote: "", titleImage: "./images/rbb/rbb.png" },
   { question: "Wie viele Mitarbeitende hat der RBB? *2023", imagePath: "", options: ["ca. 1800", "ca. 3300", "ca. 500", "ca. 2100"], answer: "ca. 2100" },
   { question: "Wie hoch ist der Marktanteil von RBB Fernsehen?", imagePath: "", options: ["14%", "6%", "10%", "3%"], answer: "6%" },
@@ -124,7 +124,7 @@ export const questions10 = [
   { question: "Welches Radioprogramm des RBB's kostet pro Minute am wenigsten?", imagePath: "", options: ["Antenne Brandenburg", "Radioeins", "radioBerlin 88.8", "Fritz"], answer: "radioBerlin 88.8" },
 ];
 
-export const questions11 = [
+const questions11 = [
   { title: "Flaggen", path: "/flags", generalNote: "", titleImage: "./images/flags/flags.png" },
   { question: "Zu welchem Land gehört diese Flagge?", imagePath: "./images/flags/flaggen_1.png", options: ["Kolumbien", "Kirgistan", "Kasachstan", "Kambodscha"], answer: "Kambodscha" },
   { question: "Zu welchem Land gehört diese Flagge?", imagePath: "./images/flags/flaggen_2.png", options: ["Malawi", "Malediven", "Mauritius", "Moldawien"], answer: "Mauritius" },
@@ -138,4 +138,4 @@ export const questions11 = [
   { question: "Zu welchem Land gehört diese Flagge?", imagePath: "./images/flags/flaggen_10.png", options: ["Andorra", "Angola", "Äquatorialguinea", "Afghanistan"], answer: "Afghanistan" },
 ];
 
-export const allQuizzes = [questions1, questions2, questions3, questions4, questions5, questions6, questions7, questions8, questions9, questions10, questions11];
+module.exports = { questions1, questions2, questions3, questions4, questions5, questions6, questions7, questions8, questions9, questions10, questions11 };
