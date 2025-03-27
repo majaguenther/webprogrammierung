@@ -13,7 +13,7 @@ function Result() {
     console.log("Antworten: ", selectedAnswers);
 
     const quiz = allQuizzes[quizIndex] || {};
-    const questions = quiz.slice(3);
+    const questions = quiz.slice(1);
 
     let totalQuestions = questions.length;
 
@@ -52,6 +52,7 @@ function Result() {
         <div className="quiz-container">
 
           <h1> Dein Ergebnis </h1>
+          <Confetti />
           {correct !== null ? <p>Du hast {correct} von {totalQuestions} richtig! {answer}</p> : <p>Du hast bestimmt super gespielt, leider gab es ein Fehler bei der Auswertung!</p>}
           <p></p>
           <button className="submit-button" onClick={handleHome}>Hauptmenü</button>
