@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import ImageComponent from "../components/ImageComponent";
 import './Quiz.css';
 import { allQuizzes } from './questions';
+import Confetti from '../components/Confetti';
 
 function Result() {
     const location = useLocation();
@@ -26,10 +27,10 @@ function Result() {
       window.scrollTo(0, 0);
     };
 
-    //lustigen Satz nach der Auswertung anzeigen
+    //lustiger Satz nach der Auswertung
     const answersOptions = {
       good: ["Oha voll gut!", "Das ist total toll!", "Weiter so!", "Wie schön!"],
-      middle: ["Da geht noch was!", "Na beim nächsten mal wird es vielleicht besser"],
+      middle: ["Da geht noch was!", "Na beim nächsten mal wird es vielleicht besser."],
       bad: ["Was war da los??", "Oh weh oh weh.", "Machste nix."]
     };
     let answer = "sdsf";
@@ -49,6 +50,7 @@ function Result() {
 
     return (
         <div className="quiz-container">
+          <Confetti /> 
           <h1> Dein Ergebnis </h1>
           {correct !== null ? <p>Du hast {correct} von {totalQuestions} richtig! {answer}</p> : <p>Du hast bestimmt super gespielt, leider gab es ein Fehler bei der Auswertung!</p>}
           <p></p>
@@ -58,7 +60,7 @@ function Result() {
             {questions.map((q, qIndex) => (
                 <div key={qIndex} className="question-container">
                   <p><strong>{q.question}</strong></p>
-                  <ImageComponent imagePath={q.imagePath} className="image-container" />
+                  <ImageComponent imagePath={q.imagePath} className="image-question-image-container" />
                   <div>
                     {q.options.map((option, oIndex) => (
                       <button

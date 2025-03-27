@@ -3,14 +3,14 @@
     cursor: pointer;
 }
 
-.image-container img {
+.image-question-container img {
     max-width: 40%;
     max-height: 500px;
     width: auto;
     height: auto;
 }
 
-.image-container img.zoomed {
+.image-question-container img.zoomed {
     position: fixed;
     top: 50%;
     left: 50%;
