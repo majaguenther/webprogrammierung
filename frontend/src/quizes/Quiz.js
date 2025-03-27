@@ -36,7 +36,6 @@ function QuizPage({ quizIndex }) {
   const title = quiz.title;
   const generalNote = quiz.generalNote;
   const questions = quiz.questions;
-  //const navigate = useNavigate();
 
   const handleSelect = (qIndex, option) => {
     setAnswers((prev) => ({ ...prev, [qIndex]: option }));
@@ -69,7 +68,7 @@ function QuizPage({ quizIndex }) {
                   {q.options.map((option, oIndex) => (
                       <button
                           key={oIndex}
-                          className={`answer-button ${quiz.questions[oIndex].answers === option ? 'selected' : ''}`}
+                          className={`answer-button ${answers[qIndex] === option ? 'selected' : ''}`}
                           onClick={() => handleSelect(qIndex, option)}
                       >
                         {option}
