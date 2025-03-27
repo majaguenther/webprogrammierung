@@ -17,7 +17,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         {allQuizzes.map((quiz, index) => (
-                            <Route path={quiz[1].path} element={<Quiz quizIndex={index} />} />
+                            <Route path={quiz[0].path} element={<Quiz quizIndex={index} />} />
                         ))}
                         <Route path="/result" element={<Result />} />
                     </Routes>

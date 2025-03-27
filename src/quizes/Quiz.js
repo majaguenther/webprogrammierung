@@ -7,8 +7,8 @@ import { allQuizzes } from './questions';
 function QuizPage({ quizIndex }) {
   const quiz = allQuizzes[quizIndex];
   const title = quiz[0].title;
-  const generalNote = quiz[2].generalNote;
-  const questions = quiz.slice(3);
+  const generalNote = quiz[0].generalNote;
+  const questions = quiz.slice(1);
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate();
 
