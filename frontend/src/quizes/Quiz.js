@@ -49,7 +49,8 @@ function QuizPage({ quizIndex }) {
 
   const handleSubmit = () => {
     
-    const selectedAnswers = questions.map((_, index) => quiz.questions[index].answers || 0); 
+    const selectedAnswers = questions.map((_, index) => answers[index] || 0); 
+    console.log("Antworten first: ", selectedAnswers);
     navigate("/result", { state: { selectedAnswers: selectedAnswers, quizIndex: quizIndex }});
     window.scrollTo(0, 0);
     
