@@ -1,29 +1,58 @@
-import { useContext, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { useNavigate  } from 'react-router-dom';
 import ImageComponent from "../components/ImageComponent";
 import './Quiz.css';
-import { useNavigate } from 'react-router-dom';
-import { allQuizzes } from './questions';
 
 function QuizPage({ quizIndex }) {
-  const quiz = allQuizzes[quizIndex];
-  const title = quiz[0].title;
-  const generalNote = quiz[0].generalNote;
-  const questions = quiz.slice(1);
+  const [allQuizzes, setAllQuizzes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate();
 
+  useEffect(() => {
+      fetch("http://localhost:3001/api/questions") 
+          .then(response => response.json())
+          .then(data => {
+              if (data && Array.isArray(data.quizzes)) {
+                  setAllQuizzes(data.quizzes); // ← Zugriff auf das quizzes-Array
+              } else {
+                  console.error("Backend returned data in unexpected format:", data);
+                  setError("Fehler beim Laden der Quiz-Daten.");
+              }
+              setIsLoading(false);
+          })
+          .catch(error => {
+              console.error("Fehler beim Abrufen der Quiz-Daten:", error);
+              setError("Konnte die Daten nicht abrufen.");
+              setIsLoading(false);
+          });
+  }, []);
+
+  if (isLoading) return <div>Lädt...</div>;
+  if (error) return <div>{error}</div>;
+
+  const quiz = allQuizzes[quizIndex];
+  const title = quiz.title;
+  const generalNote = quiz.generalNote;
+  const questions = quiz.questions;
+
   const handleSelect = (qIndex, option) => {
     setAnswers((prev) => ({ ...prev, [qIndex]: option }));
+
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [qIndex]: option,
     }));
+    
   };
 
   const handleSubmit = () => {
-    const selectedAnswers = questions.map((_, index) => answers[index] || 0); 
+    
+    const selectedAnswers = questions.map((_, index) => quiz.questions[index].answers || 0); 
     navigate("/result", { state: { selectedAnswers: selectedAnswers, quizIndex: quizIndex }});
     window.scrollTo(0, 0);
+    
   };
 
   return (
