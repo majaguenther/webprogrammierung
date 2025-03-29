@@ -1,4 +1,4 @@
-![Logo](./frontend/public/images/logo.png)
+![Logo](./frontend/public/images/favicon.png)
 # :purple_heart: Quizard :purple_heart: #
 
 Quizard - not your regular quiz website! This uni project is designed to help you gain knowledge about all kinds of topics! We (the quizards 🧙🧙‍♀️🧙) want to test YOU! Just follow the instructions to build the page and start! 🔮✨
