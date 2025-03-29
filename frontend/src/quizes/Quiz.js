@@ -4,35 +4,37 @@ import ImageComponent from "../components/ImageComponent";
 import './Quiz.css';
 
 function QuizPage({ quizIndex }) {
-  const [allQuizzes, setAllQuizzes] = useState([]);
+  const [quiz, setQuiz] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate();
 
-  useEffect(() => {
-      fetch("http://localhost:3001/api/questions") 
-          .then(response => response.json())
-          .then(data => {
-              if (data && Array.isArray(data.quizzes)) {
-                  setAllQuizzes(data.quizzes); // ← Zugriff auf das quizzes-Array
-              } else {
-                  console.error("Backend returned data in unexpected format:", data);
-                  setError("Fehler beim Laden der Quiz-Daten.");
-              }
-              setIsLoading(false);
-          })
-          .catch(error => {
-              console.error("Fehler beim Abrufen der Quiz-Daten:", error);
-              setError("Konnte die Daten nicht abrufen.");
-              setIsLoading(false);
-          });
-  }, []);
+//quiz aus dem backend laden
+useEffect(() => {
+    fetch(`http://localhost:3001/api/quizzes/${quizIndex}`) 
+        .then(response => response.json())
+        .then(data => {
+            if (data) {
+                setQuiz(data);
+            } else {
+                console.error("Quiz nicht gefunden:", data);
+                setError("Quiz nicht gefunden.");
+            }
+            setIsLoading(false);
+        })
+        .catch(error => {
+            console.error("Fehler beim Abrufen der Quiz-Daten:", error);
+            setError("Konnte die Daten nicht abrufen.");
+            setIsLoading(false);
+        });
+}, []);
 
+  //warten bis quiz geladen ist
   if (isLoading) return <div>Lädt...</div>;
   if (error) return <div>{error}</div>;
 
-  const quiz = allQuizzes[quizIndex];
+  //einzelne Komponenten des Quizes in Variablen setzen
   const title = quiz.title;
   const generalNote = quiz.generalNote;
   const questions = quiz.questions;
@@ -44,7 +46,7 @@ function QuizPage({ quizIndex }) {
       ...prevAnswers,
       [qIndex]: option,
     }));
-    
+  
   };
 
   const handleSubmit = () => {

@@ -8,21 +8,22 @@ import Confetti from '../components/Confetti';
 function Result() {
   const location = useLocation();
   const { selectedAnswers, quizIndex = 0} = location.state || {};
-  const [allQuizzes, setAllQuizzes] = useState([]);
+  const [quiz, setQuiz] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate();
 
+  //quiz aus dem backend laden
   useEffect(() => {
-      fetch("http://localhost:3001/api/questions") 
+      fetch(`http://localhost:3001/api/quizzes/${quizIndex}`) 
           .then(response => response.json())
           .then(data => {
-              if (data && Array.isArray(data.quizzes)) {
-                  setAllQuizzes(data.quizzes); // ← Zugriff auf das quizzes-Array
+              if (data) {
+                  setQuiz(data);
               } else {
-                  console.error("Backend returned data in unexpected format:", data);
-                  setError("Fehler beim Laden der Quiz-Daten.");
+                  console.error("Quiz nicht gefunden:", data);
+                  setError("Quiz nicht gefunden.");
               }
               setIsLoading(false);
           })
@@ -33,16 +34,14 @@ function Result() {
           });
   }, []);
 
+  //warten bis quiz geladen ist
   if (isLoading) return <div>Lädt...</div>;
   if (error) return <div>{error}</div>;
 
-  console.log("Antworten: ", selectedAnswers);
-
-  const quiz = allQuizzes[quizIndex];
   const questions = quiz.questions;
-
   let totalQuestions = questions.length;
 
+  //zählen wie viele Fragen richtig beantwortet wurden
   let correct = 0;
   questions.forEach((q, index) => {
     if (q.answer === selectedAnswers[index]) correct++;

@@ -8,12 +8,13 @@ function Home() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    //quiz aus dem backend laden
     useEffect(() => {
-        fetch("http://localhost:3001/api/questions") 
+        fetch("http://localhost:3001/api/quizzes") 
             .then(response => response.json())
             .then(data => {
                 if (data && Array.isArray(data.quizzes)) {
-                    setAllQuizzes(data.quizzes); // ← Zugriff auf das quizzes-Array
+                    setAllQuizzes(data.quizzes);
                 } else {
                     console.error("Backend returned data in unexpected format:", data);
                     setError("Fehler beim Laden der Quiz-Daten.");
@@ -27,12 +28,13 @@ function Home() {
             });
     }, []);
 
-    if (isLoading) return <div>Lädt...</div>;
+    //warten bis quiz geladen ist
+    if (isLoading) return <div>Die Quize werden geladen...</div>;
     if (error) return <div>{error}</div>;
 
     return (
         <div className="home-container">
-            <h1>Welcome to the Homepage</h1>
+            <h1>Die beste Quizseite der Welt: Quizard</h1>
             <div className="grid-container">
                 {allQuizzes.map((quiz, index) => (
                     <div key={index}>

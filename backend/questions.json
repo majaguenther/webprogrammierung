@@ -662,6 +662,20 @@
         "answer": "Afghanistan"
       }
     ]
+  },
+  {
+    "title": "Joshs Quiz",
+    "path": "/washatjoshgemacht",
+    "generalNote": "",
+    "titleImage": "./images/josh/Josh.png",
+    "questions": [
+      {
+        "question": "Wo ist Josh?",
+        "imagePath": "./images/DasIstWer.png",
+        "options": ["mitte", "rechts", "links"],
+        "answer": "rechts"
+      }
+    ]
   }
 ]
 }
