@@ -14,7 +14,7 @@ function App() {
     // useEffect, um die Quiz-Daten vom Backend zu laden
     useEffect(() => {
         // Backend-URL anpassen, falls nötig
-        fetch('http://localhost:3001/api/questions')
+        fetch('http://localhost:3001/api/quizzes')
             .then(response => response.json())
             .then(data => setQuizzes(data.quizzes))
             .catch(error => console.error('Error loading quizzes:', error));
@@ -27,7 +27,7 @@ function App() {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        {/* Dynamische Routen basierend auf den geladenen Quiz-Daten */}
+                        //<Route key={0} path={"/capitalcities"} element={<Quiz quizIndex={0} />} />
                         {quizzes.map((quiz, index) => (
                             <Route key={index} path={quiz.path} element={<Quiz quizIndex={index} />} />
                         ))}
